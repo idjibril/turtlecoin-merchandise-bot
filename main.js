@@ -324,7 +324,7 @@ can be multi line
 	}
 
 	if (txt.startsWith('-')) {
-		let parts = txt.split('-');
+		let parts = txt.split('\n-');
 		if (parts[0] == '') {
 			parts.splice(0, 1);
 		}
