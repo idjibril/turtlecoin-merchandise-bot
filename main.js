@@ -88,7 +88,7 @@ can be multi line
 							userTag = member.user.tag;
 						});
 
-						embed.addField(`**'${data[id].title}' by ${userTag}**`, `ID: #${id}`);
+						embed.addField(`**'${data[id].title}'** by **${userTag}**`, `ID: #${id}`);
 					};
 				}
 				replyWithEmbed(embed);
