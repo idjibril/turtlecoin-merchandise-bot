@@ -1,3 +1,11 @@
+if (!global.gc) {
+	console.log("You need to enable garbage collection to avoid excessive memory usage:\nnode --expose-gc main.js");
+	process.exit();
+} else {
+	console.log("Garbage collection is activated (every 60 seconds)! No excessive memory usage!");
+	setInterval(global.gc, 60 * 1000);
+}
+
 const request = require('request');
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -8,8 +16,8 @@ let currentAuthor = null;
 
 const MERCHANDISE_BOT_API_KEY = null; // your discord api key here
 const operatingChannel = '575955571514015754';	// no use for this.. dont remove
-const clearEnabled = true;
-const refreshEnabled = true;
+const clearEnabled = false;
+const refreshEnabled = false;
 const embedColor = '#f2c409';
 
 let prizes = {}
